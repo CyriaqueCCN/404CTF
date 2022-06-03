@@ -1,28 +1,35 @@
-passw = "4/2@PAu<+ViNgg%^5NS`#J\\AA001fNK<XNW(_" # AA = ux
-       #"404CTF{C3_sYst3mE_es7_rki[xoyK"
-       #"404CTF{C3_sYst3mE_es7_rtpIJL~ki[xoyK}"
+PASSW = "4/2@PAu<+ViNgg%^5NS`#J\x1fNK<XNW(_"
+# care about format of special chars : Java print \ux001f when python uses \x1f
+
 
 def hide(s):
     i = 0
     res = ""
     while i < len(s):
         c = s[i]
-        res += chr((ord(c) - i & 0xffff) % 0x80)
+        res += chr((ord(c) - i & 65535) % 128)
         i += 1
     return res
 
-def rev_truc(c, i):
-    # 75 au lieu de 125
-    x = (ord(c) + i)# & 0xffff)
-    if x > 127:
-        x = 128 - (x % 128)
-    return chr(x)# % 128)
 
-def rev(s):
+def rev_hide(c, i):
+    x = ord(c) + i % 128
+    return chr(x)
+
+
+def rev():
+    s = PASSW
     r = ""
     for i in range(len(s)):
-        r += rev_truc(s[i], i)
+        r += rev_hide(s[i], i)
     return r
 
 
-print(rev(passw))
+def test_hide():
+    p = hide(input("Pass ? "))
+    print(p)
+    print(p == PASSW)
+
+
+# test_hide()
+print(rev())

@@ -1,9 +1,20 @@
-from scapy.all import *
+#!/usr/bin/env python3
 
-packets = rdpcap("ping.pcapng")
+import pyshark
+import base64
+import binascii
 
+cap = pyshark.FileCapture("ping.pcapng")
 
-res = ""
-for p in packets:
-    #res += p.data
-    print(p)
+r = b""
+i = 0
+for p in cap:
+    if i % 2 == 0:
+        print(p.icmp.data)
+        r += binascii.unhexlify(p.icmp.data)
+    i += 1
+
+with open("total", "wb") as f:
+    f.write(r)
+
+#print(r)
