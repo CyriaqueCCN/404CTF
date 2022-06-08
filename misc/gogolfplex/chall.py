@@ -23,6 +23,7 @@ try:
         exit()
 except Exception as e:
     print('Vous avez tout cassé....')
+    print(e)
     exit()
 
 print('Perdu! Mais vous pouvez retenter votre chance!')
