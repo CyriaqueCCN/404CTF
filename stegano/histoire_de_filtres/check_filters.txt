@@ -1,0 +1,117 @@
+File: stage4.png (309200 bytes)
+  chunk IHDR at offset 0x0000c, length 13
+    800 x 600 image, 32-bit RGB+alpha, non-interlaced
+  chunk bKGD at offset 0x00025, length 6
+    red = 0x00ff, green = 0x00ff, blue = 0x00ff
+  chunk pHYs at offset 0x00037, length 9: 2835x2835 pixels/meter (72 dpi)
+  chunk IDAT at offset 0x0004c, length 8192
+    zlib: deflated, 32K window, default compression
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      1 1 0 3 1 2 1 1 1 2 0 3 1 3 0 2 1 2 1 1 1 3 1 0 0
+      2 0 0 1 2 0 3 1 2 3 3 1 2 1 0 1 2 (42 out of 600)
+  chunk IDAT at offset 0x02058, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      1 1 0 3 2 2 0 2 0 0 0 (53 out of 600)
+  chunk IDAT at offset 0x04064, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      3 1 0 0 3 0 0 0 (61 out of 600)
+  chunk IDAT at offset 0x06070, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      3 1 0 1 0 0 3 1 1 1 (71 out of 600)
+  chunk IDAT at offset 0x0807c, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      0 1 0 1 2 1 3 2 3 (80 out of 600)
+  chunk IDAT at offset 0x0a088, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      0 3 1 3 1 2 2 0 0 (89 out of 600)
+  chunk IDAT at offset 0x0c094, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      3 0 3 1 3 0 2 0 (97 out of 600)
+  chunk IDAT at offset 0x0e0a0, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      3 0 3 1 1 3 3 0 3 (106 out of 600)
+  chunk IDAT at offset 0x100ac, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      0 1 0 3 1 1 1 1 3 (115 out of 600)
+  chunk IDAT at offset 0x120b8, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      3 1 2 3 2 0 3 0 (123 out of 600)
+  chunk IDAT at offset 0x140c4, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      0 0 3 1 3 1 2 2 0 (132 out of 600)
+  chunk IDAT at offset 0x160d0, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      0 3 0 1 1 2 (138 out of 600)
+  chunk IDAT at offset 0x180dc, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      3 2 0 3 2 1 1 1 (146 out of 600)
+  chunk IDAT at offset 0x1a0e8, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      3 3 1 2 0 2 0 3 1 (155 out of 600)
+  chunk IDAT at offset 0x1c0f4, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      0 1 2 1 0 1 1 3 (163 out of 600)
+  chunk IDAT at offset 0x1e100, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      3 0 3 1 0 1 2 0 (171 out of 600)
+  chunk IDAT at offset 0x2010c, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      2 0 3 0 0 1 3 (178 out of 600)
+  chunk IDAT at offset 0x22118, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      1 1 0 3 1 3 1 1 (186 out of 600)
+  chunk IDAT at offset 0x24124, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      3 3 1 3 0 3 1 2 (194 out of 600)
+  chunk IDAT at offset 0x26130, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      0 3 0 3 1 0 (200 out of 600)
+  chunk IDAT at offset 0x2813c, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      1 2 3 2 1 2 3 2 0 (209 out of 600)
+  chunk IDAT at offset 0x2a148, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      3 0 3 1 3 0 (215 out of 600)
+  chunk IDAT at offset 0x2c154, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      2 1 3 2 2 1 3 3 1 (224 out of 600)
+  chunk IDAT at offset 0x2e160, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      0 0 2 2 4 4 4 4 4 (233 out of 600)
+  chunk IDAT at offset 0x3016c, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      4 4 4 4 4 4 4 4 4 4 4 (244 out of 600)
+  chunk IDAT at offset 0x32178, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      4 4 4 4 4 4 4 4 4 4 4 4 4 4 (258 out of 600)
+  chunk IDAT at offset 0x34184, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      4 4 4 4 2 4 4 4 4 4 4 4 4 4 4 2 2 2 2 2 4 3 4 4 4
+      4 4 4 2 (287 out of 600)
+  chunk IDAT at offset 0x36190, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      2 2 2 2 2 2 2 2 2 2 2 2 4 4 4 4 4 2 2 2 4 4 4 4 4
+      4 4 4 2 2 4 (318 out of 600)
+  chunk IDAT at offset 0x3819c, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 (341 out of 600)
+  chunk IDAT at offset 0x3a1a8, length 8192
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      4 4 2 4 4 4 4 4 4 4 4 4 2 4 4 4 4 4 4 4 4 (362 out of 600)
+  chunk IDAT at offset 0x3c1b4, length 874
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      4 4 (364 out of 600)
+  chunk IDAT at offset 0x3c52a, length 62098
+    row filters (0 none, 1 sub, 2 up, 3 avg, 4 paeth):
+      4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+      4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+      4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+      4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+      4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+      4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 1 1
+      1 1 1 4 1 4 4 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+      0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 4 4 4 4
+      4 2 4 2 4 4 4 2 2 4 2 4 4 2 4 2 4 4 2 1 4 4 4 4 0
+      0 0 0 0 0 0 0 0 0 0 0 (600 out of 600)
+  chunk IEND at offset 0x4b7c8, length 0
+No errors detected in stage4.png (36 chunks, 83.9% compression).

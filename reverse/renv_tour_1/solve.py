@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 def tour1(password):
     string = str("".join("".join(password[::-1])[::-1])[::-1])
     return [ord(c) for c in string]
