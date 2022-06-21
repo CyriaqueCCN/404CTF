@@ -17,7 +17,7 @@ DISK_SIZE = 27756
 def bxor(s1, s2):
     return bytes(a ^ b for a, b in zip(s1, s2))
 
-def recreate_disk_2():
+def recreate_disk_22():
     with open(D0, "rb") as d0:
         with open(D1, "rb") as d1:
             with open(D2, "wb") as d2:
@@ -25,6 +25,20 @@ def recreate_disk_2():
                 y = d1.read()
                 d2.write(bxor(x, y))
                 print("Disk 2 regenerated")
+
+def recreate_disk_2():
+    with open(D0, "rb") as d0:
+        with open(D1, "rb") as d1:
+            with open(D2, "wb") as d2:
+                x, y = b"1", b"1"
+                while x != b"" and y != b"":
+                    try:
+                        x = d0.read(1)
+                        y = d1.read(1)
+                        d2.write(bxor(x, y))#x ^ y)
+                    except Exception as e:
+                        print(e)
+                        break
 
 def fadd():
     with open(D0, "rb") as d0:
@@ -43,6 +57,24 @@ def check_parity():
                 with open("parity.img", "wb") as r:
                     r.write(xor(d0.read(), d1.read(), d2.read()))
  
+
+def check():
+    d0 = open(D0, "rb").read()
+    d1 = open(D1, "rb").read()
+    d2 = open(D2, "rb").read()
+    res = b""
+    print(d0)
+    for i in range(len(d0)):
+        if i % 3 != 2:
+            res += d0[i:i+1]
+        if i % 3 != 1:
+            res += d1[i:i+1]
+        if i % 3 != 0:
+            res += d2[i:i+1]
+    open("res.dat", "wb").write(res)
+
+check()
+exit()
 
 # recreate original disk
 # i % 3 == 0 : parity on D2
@@ -69,11 +101,12 @@ def regen(p):
                     print(f"{pfname} generated")
 
 def main():
-    recreate_disk_2()
+    #recreate_disk_2()
     perms = permutations([0, 1, 2])
     print(perms)
     for p in perms:
         regen(p)
 
+#recreate_disk_2()
 #check_parity()
 main()
