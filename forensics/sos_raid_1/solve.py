@@ -1,14 +1,11 @@
 #!/usr/bin/env python3
 
-from pwn import *
 from itertools import permutations
 
 D0 = "disk0.img"
 D1 = "disk1.img"
 D2 = "disk2.img"
-DR = "original.img"
 
-CHUNK_SIZE = 1
 DISK_SIZE = 27756
 
 # RAID-5 needs at least 3 disks to operate
@@ -17,7 +14,7 @@ DISK_SIZE = 27756
 def bxor(s1, s2):
     return bytes(a ^ b for a, b in zip(s1, s2))
 
-def recreate_disk_22():
+def recreate_disk_2():
     with open(D0, "rb") as d0:
         with open(D1, "rb") as d1:
             with open(D2, "wb") as d2:
@@ -25,56 +22,6 @@ def recreate_disk_22():
                 y = d1.read()
                 d2.write(bxor(x, y))
                 print("Disk 2 regenerated")
-
-def recreate_disk_2():
-    with open(D0, "rb") as d0:
-        with open(D1, "rb") as d1:
-            with open(D2, "wb") as d2:
-                x, y = b"1", b"1"
-                while x != b"" and y != b"":
-                    try:
-                        x = d0.read(1)
-                        y = d1.read(1)
-                        d2.write(bxor(x, y))#x ^ y)
-                    except Exception as e:
-                        print(e)
-                        break
-
-def fadd():
-    with open(D0, "rb") as d0:
-        with open(D1, "rb") as d1:
-            with open(D2, "rb") as d2:
-                with open("added.img", "wb") as r:
-                    for i in range(DISK_SIZE):
-                        r.write(d0.read(CHUNK_SIZE))
-                        r.write(d1.read(CHUNK_SIZE))
-                        r.write(d2.read(CHUNK_SIZE))
-
-def check_parity():
-    with open(D0, "rb") as d0:
-        with open(D1, "rb") as d1:
-            with open(D2, "rb") as d2:
-                with open("parity.img", "wb") as r:
-                    r.write(xor(d0.read(), d1.read(), d2.read()))
- 
-
-def check():
-    d0 = open(D0, "rb").read()
-    d1 = open(D1, "rb").read()
-    d2 = open(D2, "rb").read()
-    res = b""
-    print(d0)
-    for i in range(len(d0)):
-        if i % 3 != 2:
-            res += d0[i:i+1]
-        if i % 3 != 1:
-            res += d1[i:i+1]
-        if i % 3 != 0:
-            res += d2[i:i+1]
-    open("res.dat", "wb").write(res)
-
-check()
-exit()
 
 # recreate original disk
 # i % 3 == 0 : parity on D2
@@ -88,25 +35,22 @@ def regen(p):
         with open(D1, "rb") as d1:
             with open(D2, "rb") as d2:
                 with open(pfname, "wb") as rd:
-                    z[p[0]] = d0
-                    z[p[1]] = d1
-                    z[p[2]] = d2
+                    z[p[0]] = d0.read()
+                    z[p[1]] = d1.read()
+                    z[p[2]] = d2.read()
                     for i in range(DISK_SIZE):
                         if i % 3 != 2:
-                            rd.write(z[0].read(CHUNK_SIZE))
+                            rd.write(z[0][i:i+1])
                         if i % 3 != 1:
-                            rd.write(z[1].read(CHUNK_SIZE))
+                            rd.write(z[1][i:i+1])
                         if i % 3 != 0:
-                            rd.write(z[2].read(CHUNK_SIZE))
+                            rd.write(z[2][i:i+1])
                     print(f"{pfname} generated")
 
 def main():
-    #recreate_disk_2()
+    recreate_disk_2()
     perms = permutations([0, 1, 2])
-    print(perms)
     for p in perms:
         regen(p)
 
-#recreate_disk_2()
-#check_parity()
 main()
